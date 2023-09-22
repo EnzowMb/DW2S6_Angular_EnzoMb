@@ -15,6 +15,9 @@ import { ActivitiesListComponent } from './activities-list/activities-list.compo
     ButtonModule,
     TableModule,
     TooltipModule
+  ],
+  exports: [
+    ActivitiesListComponent
   ]
 })
 export class ActivitiesModule { }
