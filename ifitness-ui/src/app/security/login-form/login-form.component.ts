@@ -10,13 +10,20 @@ import { AuthService } from '../auth.service';
 export class LoginFormComponent {
 
   jwtPayload: any;
+  msg: any;
 
   constructor(private auth: AuthService) {
     this.jwtPayload = this.auth.jwtPayload;
   }
 
   login(user: string, password: string): void {
-    this.auth.login(user, password);
+    this.auth.login(user, password)
+    .then(() => {
+      this.msg = 'redirecionar para /activities';
+    })
+    .catch(() => {
+      this.msg = 'Usuário e/ou senha inválida!';
+    });
   }
 
 }
