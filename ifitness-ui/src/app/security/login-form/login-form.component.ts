@@ -9,7 +9,11 @@ import { AuthService } from '../auth.service';
 })
 export class LoginFormComponent {
 
-  constructor(private auth: AuthService) { }
+  jwtPayload: any;
+
+  constructor(private auth: AuthService) {
+    this.jwtPayload = this.auth.jwtPayload;
+  }
 
   login(user: string, password: string): void {
     this.auth.login(user, password);
