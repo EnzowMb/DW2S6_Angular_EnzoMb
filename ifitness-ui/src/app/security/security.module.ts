@@ -8,6 +8,10 @@ import { ButtonModule } from 'primeng/button';
 
 import { LoginFormComponent } from './login-form/login-form.component';
 
+export function tokenGetter(): any {
+  return localStorage.getItem('token');
+}
+
 @NgModule({
   declarations: [
     LoginFormComponent
