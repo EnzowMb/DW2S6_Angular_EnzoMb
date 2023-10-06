@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class ActivityRegisterComponent {
 
+  types = [
+    { label: 'Caminhada', value: 'CAMINHADA' },
+    { label: 'Ciclismo', value: 'CICLISMO' },
+    { label: 'Corrida', value: 'CORRIDA' },
+    { label: 'Natação', value: 'NATACAO' }
+  ];
+
 }
